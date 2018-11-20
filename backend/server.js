@@ -17,6 +17,7 @@ app.use(cors({
 // xhr.send(null);
 
 app.use(bodyParser.json());
+mongoose.set('useFindAndModify', false);
 
 mongoose.connect('mongodb://abc:admin1@ds024748.mlab.com:24748/books', { useNewUrlParser: true });
 
