@@ -61,7 +61,7 @@ export class EditComponent implements OnInit {
       status = this.book.status;
     }
     this.bookService.updateBook(this.id, title, author, status).subscribe(() => {
-      this.router.navigate(['list', 'create']);
+      this.router.navigate(['list']);
       this.snackBar.open('Book updated successfully', 'OK', {
         duration: 3000
       });
